@@ -1,0 +1,17 @@
+.contacts-index {
+	@include container();
+	display: flex;
+	flex-flow: row wrap;
+	& h2 {
+		text-align: center;
+		&::after {
+			content: '';
+			display: block;
+			width: 40%;
+			height: 0.2rem;
+			background-color: ac(primary);
+			margin: 0 auto;
+			margin-top: 2rem;
+		}
+	}
+}

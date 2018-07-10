@@ -1,0 +1,11 @@
+.is-scale-1x {
+	transform: scale(1);
+}
+
+.is-opacity {
+	opacity: 1;
+}
+
+.is-desaturate {
+	color: mix(white, ac(text), 50%);	
+}
