@@ -1,27 +1,7 @@
 include partials/head
 body
 	#site-wrapper
-		include partials/site-header/nav-mob
-		.mob-top
-			.logo
-				img(src="/img/assets/brand/logo.svg" alt="Megobari logo")
-			#nav-open-btn.nav-open-btn
-		section#site-header
-			include partials/site-header/nav-screen
-			.social
-				a(href="//www.facebook.com/megobari15/" target="_blank").ic-fb
-				a(href="//www.instagram.com/megobari.wine/" target="_blank").ic-in
-		
-			.hero
-				.hero-text
-					h1 ГРУЗИНСКИЙ ВИННЫЙ БАР
-					.hero-text-contact
-						p Маросейка 15
-						p 
-							a(href="tel:+79057004007" ) т. +7 (905) 700-40-07
-					button.btn Забронировать
-					a(href="#site-main").hero-anchor
-
+		include partials/site-header
 
 		section#site-main
 			.categories
@@ -71,40 +51,41 @@ body
 				.gallery-preview-wrapper
 					.gallery-preview-wrapper-item
 						.gallery-preview-wrapper-item-img
-							a(href="#")
-								img(src="/img/gallery/4.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(href="#")
-									img(src="/img/gallery/3.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(href="#")
+							a(data-fancybox="gallery" href="img/gallery/2.jpg")
 								img(src="/img/gallery/2.jpg", alt="Megobari")
 					.gallery-preview-wrapper-item
 						.gallery-preview-wrapper-item-img
-							a(href="#")
+								a(data-fancybox="gallery" href="img/gallery/4.jpg")
+									img(src="/img/gallery/4.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/1.jpg")
 								img(src="/img/gallery/1.jpg", alt="Megobari")
 					.gallery-preview-wrapper-item
 						.gallery-preview-wrapper-item-img
-							a(href="#")
-								img(src="/img/gallery/2.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(href="#")
-								img(src="/img/gallery/3.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(href="#")
-								img(src="/img/gallery/4.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(href="#")
-								img(src="/img/gallery/3.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(href="#")
+								a(data-fancybox="gallery" href="img/gallery/2.jpg")
 									img(src="/img/gallery/2.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/3.jpg")
+								img(src="/img/gallery/3.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/4.jpg")
+									img(src="/img/gallery/4.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/1.jpg")
+								img(src="/img/gallery/1.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/2.jpg")
+									img(src="/img/gallery/2.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/3.jpg")
+									img(src="/img/gallery/3.jpg", alt="Megobari")
+					
 
 					a(href="gallery.html").btn Перейти в галерею
 

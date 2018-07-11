@@ -11,3 +11,6 @@
 
 
 //= partials/app.js
+//= partials/fancy.js
+
+
