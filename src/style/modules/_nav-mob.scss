@@ -7,9 +7,18 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-content: center;
+	align-items: center;
 	padding: 2rem;
 	z-index: 9;
+}
+
+.mob-top {
+	& .logo {
+		& img {
+			display: block;
+			max-width: 15rem;
+		}
+	}
 }
 
 // nav open btn

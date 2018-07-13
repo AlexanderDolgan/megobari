@@ -45,6 +45,10 @@
 	& .logo {
 		max-width: 24rem;
 		margin: 0 auto;
+		& img {
+			display: block;
+			width: 100%;
+		}
 	}
 	&-links ul {
 		margin: 0;

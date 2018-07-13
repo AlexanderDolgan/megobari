@@ -1,65 +1,37 @@
-.contacts-index {
+.contacts {
 	@include container();
-	padding-right: .5rem;
-	padding-left: .5rem;
-	& h2 {
-		text-align: center;
-		&::after {
-			content: '';
-			display: block;
-			width: 40%;
-			height: 0.2rem;
-			background-color: ac(primary);
-			margin: 0 auto;
-			margin-top: 2rem;
+	text-align: center;
+}
+
+.contacts address {
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		& a {
+			color: ac(text);
 		}
 	}
 }
 
-.contacts-index-wrapper {
-	& .contacts-index-wrapper-item {
-		& .map {
-			position: relative;
-			height: 37rem;
-			overflow: hidden;
-			& img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: auto;
-				height: 100%;
-			}
-		}
-		& form {
-			& p:nth-child(n+2) {
-				margin-top: 1.75rem;
-			}
-			& button {
-				display: block;
-				margin-top: 2rem;
-				width: 100%;
-			}
-		}
+.contacts .social {
+	display: inline-block;
+	margin-top: 4rem;
+	& .ic-fb {
+		display: inline-block;
+		padding-right: 4rem;
+		@include retina-sprite($ic-facebook-group);
+	}
+	& .ic-in {
+		display: inline-block;
+		@include retina-sprite($ic-instagram-group);
 	}
 }
 
-@media (min-width: $b-medium-advance) {
-	.contacts-index-wrapper {
-		display: flex;
-		& .contacts-index-wrapper-item {
-			width: percentage(6/12);
-			padding: 1rem;
-			& form {
-				& p {
-					margin: 0;
-				}
-				& button {
-					width: auto;
-					margin: 0 auto;
-					margin-top: 2rem;
-				}
-			}
-		}
-	}
+
+
+.contacts #map {
+	width: 100%;
+	height: 50rem;
+	margin-top: 4rem;
 }

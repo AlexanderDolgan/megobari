@@ -25,7 +25,6 @@ $(document).ready(function(){
 
 	$(window).scroll(function() {    
     var scroll = $(window).scrollTop();
-		console.log(scroll);
     if (scroll > 0) {
 			$('.nav-screen').css('background-color', 'white');
 			$('.nav-screen ul li a').css('color', '#292929');
@@ -36,3 +35,35 @@ $(document).ready(function(){
 }); //missing );
 
 });
+
+// Yandex Map
+ymaps.ready(init);
+
+function init() {
+
+    ////YandexApi map
+    var megobariMap = new ymaps.Map("map", {
+            center: [55.757921, 37.636778], //megobari hostel
+            zoom: 17,
+
+            //убрать кнопки управления
+            controls: ['zoomControl']
+        }),
+
+
+        // Создаем геообъект с типом геометрии "Круг".
+        megobariPlacemark = new ymaps.GeoObject({
+            // Описание геометрии
+            geometry: {
+                type: "Point",
+                coordinates: [55.757921, 37.636778]
+            }
+        });
+
+    megobariMap.geoObjects.add(megobariPlacemark);
+
+
+// отключается zoom при прокрутке страницы
+    megobariMap.behaviors.disable('scrollZoom');
+    megobariMap.behaviors.disable('drag');
+}
