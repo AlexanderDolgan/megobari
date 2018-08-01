@@ -18,6 +18,10 @@
 	}
 	&-img {
 		margin-top: 2rem;
+		& img {
+			display: block;
+			width: 100%;
+		}
 	}
 	&-footer {
 		text-align: center;

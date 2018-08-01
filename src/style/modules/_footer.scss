@@ -24,7 +24,7 @@
 			margin-top: 2rem;
 			& .ic-fb {
 				display: inline-block;
-				padding-right: 4rem;
+				margin-right: 2rem;
 				@include retina-sprite($ic-facebook-w-group);
 			}
 			& .ic-in {

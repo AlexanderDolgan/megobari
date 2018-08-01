@@ -6,6 +6,7 @@
 .contacts address {
 	& ul {
 		margin: 0;
+		margin: 0;
 		padding: 0;
 		list-style: none;
 		& a {
@@ -27,8 +28,6 @@
 		@include retina-sprite($ic-instagram-group);
 	}
 }
-
-
 
 .contacts #map {
 	width: 100%;

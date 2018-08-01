@@ -26,11 +26,13 @@ $(document).ready(function(){
 	$(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     if (scroll > 0) {
-			$('.nav-screen').css('background-color', 'white');
-			$('.nav-screen ul li a').css('color', '#292929');
+			$('.nav-screen').addClass('is-sticky');
+			// $('.sticky').css('background-color', 'white');
+			// $('.sticky ul li a').css('color', '#292929');
     } else {
-			$('.nav-screen').css('background-color', 'transparent');
-			$('.nav-screen ul li a').css('color', 'white');
+			$('.nav-screen').removeClass('is-sticky');
+			// $('.sticky').css('background-color', 'transparent');
+			// $('.sticky ul li a').css('color', 'white');
 		}
 }); //missing );
 
