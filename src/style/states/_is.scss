@@ -11,9 +11,10 @@
 }
 
 .is-sticky {
-	background-color: ac(white);
+	background-color: ac(black);
+	z-index: 111;
 	& ul li a {
-		color: ac(text) !important;
+		// color: ac(text) !important;
 	}
 }
 

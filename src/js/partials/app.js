@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	$('.nav-open-btn').on('click', function() {
 		$('body').toggleClass('no-scroll');
-		$('.nav-mob').toggleClass('active-nav');
+		$('.nav-mob').addClass('active-nav');
 	});
 
 	$(document).keyup(function(e) {     
@@ -34,7 +34,11 @@ $(document).ready(function(){
 			// $('.sticky').css('background-color', 'transparent');
 			// $('.sticky ul li a').css('color', 'white');
 		}
-}); //missing );
+	}); //missing );
+
+	// $('.menu-category').mouseenter( function() {
+	// 	$('.menu-content-nav').stop().addClass('menu-content-nav-active');
+	// });
 
 });
 
@@ -45,7 +49,7 @@ function init() {
 
     ////YandexApi map
     var megobariMap = new ymaps.Map("map", {
-            center: [55.757921, 37.636778], //megobari hostel
+            center: [55.757921, 37.636778], //megobari
             zoom: 17,
 
             //убрать кнопки управления
@@ -67,5 +71,5 @@ function init() {
 
 // отключается zoom при прокрутке страницы
     megobariMap.behaviors.disable('scrollZoom');
-    megobariMap.behaviors.disable('drag');
+    // megobariMap.behaviors.disable('drag');
 }
