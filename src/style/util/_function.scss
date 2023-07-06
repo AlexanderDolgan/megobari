@@ -59,7 +59,7 @@ $saturations: (
 			}
 
 			//@return $args;
-      @return call($args...);
+      @return call(get-function($args...));
     }
 	}
 
