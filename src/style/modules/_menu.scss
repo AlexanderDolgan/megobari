@@ -69,15 +69,27 @@
 		display: inline-block;
 		& a {
 			display: block;
+			position: relative;
 			padding: .5rem;
 			color: ac(text);
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: 1.6rem;
+			&::before {
+				content: '';
+				display: inline-block;
+				background: #292929;
+				padding: .5rem;
+				border-radius: 1rem;
+				margin: 0 1rem 0 .25rem;
+			}
 		}
 	}
-	& .current_page_item {
+	& .current_page_item a {
 		color: ac(primary);
+		&::before {
+			background: ac(primary);;
+		}
 	}
 }
 

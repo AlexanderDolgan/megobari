@@ -1,12 +1,16 @@
 {
-  "name": "megobari",
-  "description": "web megobaru",
+  "name": "page20",
+  "description": "page20 apart hotel",
   "main": "index.js",
   "authors": [
     "Alexander Dolgan"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/AlexanderDolgan/megobari",
+  "keywords": [
+    "page20",
+    "aparthotel"
+  ],
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,7 +18,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "jquery": "^3.3.1"
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }

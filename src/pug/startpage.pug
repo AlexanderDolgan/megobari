@@ -1,0 +1,30 @@
+include partials/head
+
+body
+    #s-site-wrapper
+        section#s-site-main
+            .s-item.s-item-header
+                .logo
+                    img(src="img/assets/brand/logo-b.svg", alt="мегобари логотип")
+                h2 Грузинский винный бар
+
+            .s-item.s-rest.s-maroseyka(style="background-image: url(../img/bg-image.jpg);")
+                .s-contact-info
+                    a(href="#").s-contact-text
+                        h3 Маросейка, 15
+                        .s-address
+                            p Маросейка, 15
+                            p пн.- вс.: 12:00-23:00,
+                            p т. +7(905)700-40-07
+            
+            .s-item.s-rest.s-mechta(style="background-image: url(../img/bg-image-mechta.jpg);")
+                .s-contact-info
+                    a(href="#").s-contact-text
+                        h3 “Остров Мечты”
+                        .s-address
+                            p Проспект Андропова, 1,
+                            p Тематический Парк "Остров Мечты"
+                            p пн.-вс.: 10:00-00:00
+                            p т. +7(968)700-40-07
+
+            include partials/site-footer-start-page
