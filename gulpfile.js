@@ -1,7 +1,7 @@
 // series parallel
+const gulp = require('gulp');
 
 const { series, parallel, src, dest, watch } = require('gulp');
-const gulp = require('gulp');
 
 // js
 const babel = require('gulp-babel');
@@ -13,14 +13,14 @@ const sourcemaps = require('gulp-sourcemaps');
 const pug = require('gulp-pug');
 
 // css
-const sass = require('gulp-sass');
-const	autoprefixer = require('autoprefixer');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
-const	cleanCSS = require('gulp-clean-css');
+const cleanCSS = require('gulp-clean-css');
 
 //Minify PNG, JPEG, GIF and SVG images
 const	imagemin = require('gulp-imagemin');
-const jpegtran = require('imagemin-jpegtran');
+// const jpegtran = require('imagemin-jpegtran');
 const gifsicle = require('imagemin-gifsicle');
 const optipng = require('imagemin-optipng');
 const svgo = require('imagemin-svgo');
@@ -45,7 +45,7 @@ const config = {
 	//tunnel: true,
 	host: 'localhost',
 	port: 8888,
-	logPrefix: "page20"
+	logPrefix: "tsomi-delivery"
 };
 
 function reload(done) {
@@ -92,7 +92,7 @@ function images() {
 		// .pipe(newer('src/img/**/*.*'))
 		.pipe(imagemin([
 			imagemin.gifsicle({interlaced: true}),
-			imagemin.jpegtran({progressive: true}),
+			// imagemin.jpegtran({progressive: true}),
 			imageminJpegRecompress(),
 			imagemin.optipng({optimizationLevel: 5}),
 			imagemin.svgo({

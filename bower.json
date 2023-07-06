@@ -1,13 +1,13 @@
 {
-  "name": "page20",
-  "description": "page20 apart hotel",
+  "name": "megobari-start",
+  "description": "megobari-start",
   "main": "index.js",
   "authors": [
     "Alexander Dolgan"
   ],
   "license": "ISC",
   "keywords": [
-    "page20",
+    "megobari-start",
     "aparthotel"
   ],
   "homepage": "",
