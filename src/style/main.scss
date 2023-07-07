@@ -5,6 +5,8 @@ Author URI:
 Version: 1.0
 */
 
+@use "sass:math";
+
 @font-face {
 	font-family: 'girottbold';
 	src: url('../fonts/girott_bold.otf');

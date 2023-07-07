@@ -10,16 +10,16 @@ $font-smooth: antialiased;
 
 //Colors
 $colors: (
-	primary: hsl(34, 97, 47),
-	secondary: hsl(212,73,60),
-	third: hsl(309,100,80),
-	text: hsl(0,0,16),
-	accept: hsl(90,45,45),
-	alert: hsl(0,100,70),
-	white: hsl(0,0,100),
-	black: hsl(0,0,0),
-	gray: hsl(0,0,60),
-	lightgray: hsl(0,0,94)
+	primary: hsl(34, 97%, 47%),
+	secondary: hsl(212,73%,60%),
+	third: hsl(309,100%,80%),
+	text: hsl(0,0%,16%),
+	accept: hsl(90,45%,45%),
+	alert: hsl(0,100%,70%),
+	white: hsl(0,0%,100%),
+	black: hsl(0,0%,0%),
+	gray: hsl(0,0%,60%),
+	lightgray: hsl(0,0%,94%)
 );
 
 $body-background: ac(white);

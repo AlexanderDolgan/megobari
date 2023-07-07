@@ -1,21 +1,21 @@
 #site-header .header-mid {
 	padding: 2rem;
 	& .logo {
-		width: percentage(5/12);
+		width: math.div(5, 12) * 100%;
 		font-size: 0;
 	}
 	& .nav {
-			width: percentage(2/12);
+			width: math.div(2, 12) * 100%;
 	}
 }
 
 @media (min-width: $b-medium) {
 	#site-header .header-mid{
 		& .logo {
-			width: percentage($number: 3/12);
+			width: math.div(3, 12) * 100%;
 		}
 		& .nav {
-			width: percentage($number: 1/12);
+			width: math.div(1, 12) * 100%;
 		}
 	}
 }
@@ -25,7 +25,7 @@
 		padding: 4rem 2rem;
 		justify-content: space-between;
 		& .logo {
-			max-width: percentage($number: 2/12);
+			max-width: math.div(2, 12) * 100%;
 		}
 		& .nav {
 			width: 100%;

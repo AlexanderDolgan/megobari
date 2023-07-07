@@ -49,7 +49,7 @@
 	.contacts-index-wrapper {
 		display: flex;
 		& .contacts-index-wrapper-item {
-			width: percentage(6/12);
+			width: math.div(6, 12) * 100%;
 			padding: 1rem;
 			& form {
 				& p {

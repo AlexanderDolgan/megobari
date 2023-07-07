@@ -1,25 +1,25 @@
 #s-site-wrapper {
-    height: 100%;
+    height: 100vh;
     min-height: 100vh;
 }
 
 #s-site-main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 21rem 1fr 1fr 5rem;
+	grid-template-rows: 16rem 1fr 1fr 1fr 5rem;
 	height: 100%;
 	width: 100%;
 	@media (min-width: $b-medium) {
-		grid-template-rows: 30.75rem 1fr 1fr 5rem;
+		grid-template-rows: 25.75rem 1fr 1fr 1fr 5rem;
     }
 	@media (min-width: $b-large) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 30.75rem 1fr 5rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 25.75rem 1fr 5rem;
     }
 }
 
 .s-item-header {
-    background-color: ac(primary);
+	background-color: ac(primary);
 	text-align: center;
 	display: flex;
 	flex-flow: column;
@@ -35,16 +35,16 @@
 	}
 	& .logo img {
 		width: 100%;
-		max-width: 75%;
+		max-width: 50%;
 		@media (min-width: $b-medium) {
-			max-width: 47.75rem;
+			max-width: 40rem;
 		}
 		@media (min-width: $b-xxlarge) {
-			max-width: 56rem;
+			max-width: 48rem;
 		}
 	}
 	@media (min-width: $b-large) {
-		grid-column: span 2;
+		grid-column: span 3;
 	}
 }
 
@@ -53,13 +53,13 @@
 	justify-content: center;
 }
 
-.s-maroseyka, .s-mechta {
+.s-maroseyka, .s-mechta, .s-sretenka {
 	background-size: cover;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
 
-.s-maroseyka {
+.s-maroseyka, .s-mechta {
 	border-bottom: solid 1rem ac(primary);
 	@media (min-width: $b-large) {
 		border-bottom: none;
@@ -126,10 +126,10 @@
 
 //footer
 #s-site-footer {
-	background-color: hsl(0,0,10);
-	border-bottom: solid 1px hsl(0,0,30);
+	background-color: hsl(0,0%,10%);
+	border-bottom: solid 1px hsl(0,0%,30%);
 	@media (min-width: $b-large) {
-		grid-column: span 2;
+		grid-column: span 3;
 	}
 }
 
@@ -154,6 +154,10 @@
 			display: block;
 			align-self: center;
 			@include retina-sprite($ic-instagram-w-group);
+		}
+		& .ic-vk,& .ic-zn,& .ic-tm {
+			display: block;
+			padding: 1rem;
 		}
 	}
 }

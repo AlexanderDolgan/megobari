@@ -51,48 +51,55 @@ $saturations: (
     } @else {
       // make it easier to deal with nested map
       $this-variation: map-get($variations, $variation);
-			// $args = $function, $color
-      $args: join(map-get($this-variation, function), $color);
+      // get the function to call
+      $function: get-function(map-get($this-variation, function));
+      $args: $color;
       @if map-get($this-variation, parameters) {
-        // $args = $function, $colors, $parameters
         $args: join($args, map-get($this-variation, parameters));
-			}
-
-			//@return $args;
-      @return call(get-function($args...));
+      }
+      // call the function
+      @return call($function, $args...);
     }
-	}
+  }
 
   // no $variation, just return $color
   @return $color;
 }
+
 
 // main function get color from cv($color, $variation)
 // apply color adjastment - parameter $adjast-color
 // при использовании mix функции, примешивается белый/черный цвета. При уменьшении яркости цвета (mix-black - уменьшается только яркость), функция увеличивает его насыщенность (saturate). при увеличении яркости цвета (mix-white - увеличивается только яркость) функция уменьшает насыщенность (desaturate). Так цвет выглядит более натурально.
 
 //TODO: объединить функции color-variation и adj-color. чтобы при добавлении tint и shade, adjast-color применялся без 3-го параметра функции get-color.
-@function ac($color, $variation:false, $adjast-color: false) {
-	$color: cv($color, $variation);
+@function ac($color, $variation:false, $adjust-color: false) {
+  $color: cv($color, $variation);
 
-	@if $adjast-color {
-    @if not map-has-key($saturations, $adjast-color) {
-      // adjast-color is not in $saturations
-      @error "Invalid $adjast-color: `#{$saturations}`.";
+  @if $adjust-color {
+    @if not map-has-key($saturations, $adjust-color) {
+      // adjust-color is not in $saturations
+      @error "Invalid $adjust-color: `#{$adjust-color}`.";
     } @else {
       // make it easier to deal with nested map
-      $this-adjast-color: map-get($saturations, $adjast-color);
-      // $args = $function, $color
-      $args: join(map-get($this-adjast-color, function), $color);
-      @if map-get($this-adjast-color, parameters) {
-        // $args = $function, $colors, $parameters
-        $args: join($args, map-get($this-adjast-color, parameters));
-			}
-
-			//@return $args;
-      @return call($args...);
+      $this-adjust-color: map-get($saturations, $adjust-color);
+      // get the function to call
+      $function: get-function(map-get($this-adjust-color, function));
+      $args: ($color);
+      @if map-has-key($this-adjust-color, parameters) {
+        $args: join($args, map-get($this-adjust-color, parameters));
+      }
+      // call the function
+      @return call($function, $args...);
     }
-	}
-	// no $variation, just return $color
+  }
+  
+  // no $adjust-color, just return $color
   @return $color;
+}
+
+
+//The to-rem function takes an input value in pixels and returns the equivalent value in rems. The calculation used is input value / base font size = result in rems.
+
+@function to-rem($px) {
+  @return $px / $global-font-size + rem;
 }

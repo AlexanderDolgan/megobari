@@ -45,7 +45,7 @@ const config = {
 	//tunnel: true,
 	host: 'localhost',
 	port: 8888,
-	logPrefix: "tsomi-delivery"
+	logPrefix: "megobari-start"
 };
 
 function reload(done) {

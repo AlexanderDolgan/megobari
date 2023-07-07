@@ -21,11 +21,11 @@
 			left: 0;
 			height: 100%;
 			width: 100%;
-			background-color: hsla(0,0,0,.4);
+			background-color: hsla(0,0%,0%,.4);
 			transition: .33s background-color ease-in-out;
 			z-index: 1;
 			&:hover {
-				background-color: hsla(0,0,0,0);
+				background-color: hsla(0,0%,0%,0);
 			}
 		}
 		& img {

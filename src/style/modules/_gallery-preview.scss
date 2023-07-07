@@ -31,7 +31,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	&-item {
-		width: percentage(6/12);
+		width: math.div(6, 12) * 100%;
 		padding: .25rem;
 		&:nth-child(n+7) {
 			display: none;
@@ -59,7 +59,7 @@
 	}
 	.gallery-preview-wrapper {
 		&-item {
-			width: percentage(4/12);
+			width: math.div(4, 12) * 100%;
 			&-img {
 				height: 18rem;
 			}
@@ -70,7 +70,7 @@
 @media (min-width: $b-medium) {
 	.gallery-preview-wrapper {
 		&-item {
-			width: percentage(3/12);
+			width: math.div(3, 12) * 100%;
 			&-img {
 				height: 20rem;
 			}

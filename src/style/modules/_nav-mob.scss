@@ -89,7 +89,7 @@
 
 @media (min-width: $b-medium) {
 	.nav-mob {
-		width: percentage(5/12);
+		width: math.div(5, 12) * 100%;
 		box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
 	}
 	.nav-mob ul {
